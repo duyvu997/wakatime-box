@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "10 7 * * *"
-
+permissions: read-all
 jobs:
   update-gist:
     runs-on: ubuntu-latest
