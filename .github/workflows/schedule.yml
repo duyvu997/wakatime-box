@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - name: Print secret value
+        run: echo ${{ secrets.GH_TOKEN }}
       - name: wakatime-gist
         uses: abordage/wakatime-box@master
         env:
