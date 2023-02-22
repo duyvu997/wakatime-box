@@ -8,6 +8,7 @@ permissions: read-all
 jobs:
   update-gist:
     runs-on: ubuntu-latest
+    environment: repo
     steps:
       - uses: actions/checkout@v3
       - name: Print secret value
