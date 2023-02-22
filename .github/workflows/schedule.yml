@@ -2,17 +2,12 @@ name: WakaTime Stats
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 7 * * *"
-permissions: read-all
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     environment: repo
     steps:
       - uses: actions/checkout@v3
-      - name: Print secret value
-        run: echo ${{ secrets.GH_TOKEN }}
       - name: wakatime-gist
         uses: abordage/wakatime-box@master
         env:
